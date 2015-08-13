@@ -2,7 +2,7 @@ environments {
 
 dev {
 		server {
-			localHomeDir = '/apache/apache-tomcat-8.0.24-dev'
+			localHomeDir = '/usr/local/apache-tomcat-8.0.24-dev'
 			containerId = 'tomcat8x'
 			hostname = 'ec2-54-169-82-188.ap-southeast-1.compute.amazonaws.com'
 			port = 8091
@@ -13,7 +13,7 @@ dev {
 }
 qa {
 		server {
-			localHomeDir = '/apache/apache-tomcat-8.0.24-qa'
+			localHomeDir = '/usr/local/apache-tomcat-8.0.24-qa'
 			containerId = 'tomcat8x'
 			hostname = 'ec2-54-169-82-188.ap-southeast-1.compute.amazonaws.com'
 			port = 8092
@@ -24,7 +24,7 @@ qa {
 	}
 perf {
 		server {
-			localHomeDir = '/apache/apache-tomcat-8.0.24-perf'
+			localHomeDir = '/usr/local/apache-tomcat-8.0.24-perf'
 			containerId = 'tomcat8x'
 			hostname = 'ec2-54-169-82-188.ap-southeast-1.compute.amazonaws.com'
 			port = 8093
@@ -35,7 +35,7 @@ perf {
 	}
 stage {
 		server {
-			localHomeDir = '/apache/apache-tomcat-8.0.24-stage'
+			localHomeDir = '/usr/local/apache-tomcat-8.0.24-stage'
 			containerId = 'tomcat8x'
 			hostname = 'ec2-54-169-82-188.ap-southeast-1.compute.amazonaws.com'
 			port = 8094
@@ -46,7 +46,7 @@ stage {
 	}
 prod {
 		server {
-			localHomeDir = '/apache/apache-tomcat-8.0.24-prod'
+			localHomeDir = '/usr/local/apache-tomcat-8.0.24-prod'
 			containerId = 'tomcat8x'
 			hostname = 'ec2-54-169-82-188.ap-southeast-1.compute.amazonaws.com'
 			port = 8095
