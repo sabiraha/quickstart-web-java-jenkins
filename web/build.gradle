@@ -14,23 +14,8 @@ project(':web') {
 	apply plugin: 'com.bmuschko.cargo'
 
 	repositories {
-		maven {
-			url binaryRepositoryJCenterLocalUrl
-			credentials {
-				username = binaryRepositoryUserName
-				password = binaryRepositoryPassword
-			}
-		}
-		maven {
-			url binaryRepositoryMavenLocalUrl
-			credentials {
-				username = binaryRepositoryUserName
-				password = binaryRepositoryPassword
-			}
-		}
-		//jcenter()
+		mavenLocal()
 		//mavenCentral()
-		
 	}
 
 	dependencies {
@@ -113,8 +98,8 @@ project(':web') {
 	uploadArchives{
 		repositories{
 			mavenDeployer{
-				repository(url: binaryRepositoryReleasesUrl){
-					authentication(userName: binaryRepositoryUserName,password:binaryRepositoryPassword)
+				repository(url: releasesRepoPath){
+					authentication(userName: repoUserName,password:repoPassword)
 				}
 			}
 		}
@@ -132,10 +117,10 @@ project(':web') {
 		}
 		repositories {
 			maven {
-				url binaryRepositoryReleasesUrl
+				url releasesRepoPath
 				credentials {
-					username = binaryRepositoryUserName
-					password = binaryRepositoryPassword
+					username = repoUserName
+					password = repoPassword
 				}
 			}
 		}
@@ -143,7 +128,7 @@ project(':web') {
 	
 	repositories {
 		maven {
-			url binaryRepositoryReleasesUrl 
+			url releasesRepoPath 
 		}
 	}
 	configurations {
